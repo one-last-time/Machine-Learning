@@ -1,0 +1,22 @@
+fprintf('Running Practice\n');
+t=[0:0.01:0.98];
+y1=sin(2*pi*4*t);
+plot(t,y1,'r');
+hold on;
+y2=cos(2*pi*4*t);
+plot(t,y2,'g');
+xlabel('time');
+ylabel('value');
+legend('sin','cosine');
+title('sin and cosine curve');
+print -dpng 'curve.png';
+subplot(1,2,1);
+plot(t,y1);
+axis([0.5 1 -1 1]);
+subplot(1,2,2);
+plot(t,y2);
+axis([0.2 1 -1 1]);
+clf;
+A= magic(5);
+A
+imagesc(A),colorbar;
